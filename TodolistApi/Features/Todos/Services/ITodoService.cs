@@ -36,6 +36,13 @@ public interface ITodoService
     Task UpdateAsync(int id, UpdateTodoDto dto);
 
     /// <summary>
+    /// Supprime un todo définitivement.
+    /// </summary>
+    /// <param name="id">Identifiant du todo à supprimer.</param>
+    /// <returns></returns>
+    Task DeleteAsync(int id);
+
+    /// <summary>
     /// Récupère un statut de todo à partir de sa valeur.
     /// </summary>
     /// <param name="value">Valeur du statut à récupérer.</param>

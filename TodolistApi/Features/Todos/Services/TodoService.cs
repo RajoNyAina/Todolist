@@ -119,4 +119,14 @@ public class TodoService : ITodoService
             _ => [],
         };
     }
+
+    /// <inheritdoc/>
+    public async Task DeleteAsync(int id)
+    {
+        var todo = await _todoRepo.ReadByIdAsync(id);
+        if (todo != null)
+        {
+            await _todoRepo.DeleteAsync(todo);
+        }
+    }
 }
