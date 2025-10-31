@@ -1,5 +1,3 @@
-version: '3.9'
-
 services:
   web_api:
     container_name: todolist_app
